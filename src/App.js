@@ -7,7 +7,7 @@ import CardMedia from '@mui/material/CardMedia';
 import { createTheme } from '@mui/material/styles';
 import { purple } from '@mui/material/colors';
 import { ThemeProvider } from '@emotion/react';
-import { Box } from '@mui/material';
+import { Box, Link, Typography } from '@mui/material';
 
 const darkPurple = createTheme({
   palette: {
@@ -25,7 +25,7 @@ function App() {
     <ThemeProvider theme={darkPurple}>   
       <div className="App">
         <header className="App-header">
-          <Card className="card-component" raised="true">
+          <Card sx={{ maxWidth: 345, backgroundColor: '#282c34' }} className="card-component" raised="true">
             <Box>
           <CardMedia
               component="img"
@@ -37,17 +37,17 @@ function App() {
           <Button>
             Test
           </Button>
-          <p>
+          <Typography>
             Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
+          </Typography>
+          <Link
             className="App-link"
             href="https://reactjs.org"
             target="_blank"
             rel="noopener noreferrer"
           >
             Learn React
-          </a>
+          </Link>
           </CardContent>
           </Box>
           </Card>
