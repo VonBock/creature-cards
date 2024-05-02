@@ -2,7 +2,15 @@
   text-align: center;
 }
 
-.App-logo {
+.creature-box{
+  background-color: #3b4045;
+  /* border: 7px;
+  border-color: #2d3237; */
+  margin: 32px 16px 16px 16px;
+  box-shadow: inset 0px 0px 6px 6px #2d3135;
+}
+
+.creature-media {
   height: 40vmin;
   pointer-events: none;
 }
@@ -12,13 +20,18 @@
 }  */
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 3s alternate-reverse;
+  .creature-media {
+    animation: creature-rotate infinite 3s alternate-reverse;
+    
   }
 }
 
+.creature-card {
+  background-color: #2d3237;
+}
+
 .App-header {
-  background-color: #282c34;
+  background-color: #2d3237;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -32,11 +45,13 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+@keyframes creature-rotate {
   from {
-    transform: rotate(-20deg);
+    /* transform: rotate(10deg); */
+    transform: translateY(50px);
   }
   to {
-    transform: rotate(15deg);
+    transform: translateY(0px) rotate(-23deg);
   }
 }
+
